@@ -3,10 +3,11 @@ import { useRouter } from 'next/router';
 
 const Page = () => {
 	const {
-		query: { id }
+		query: { params }
 	} = useRouter();
 
-	return <div>Note Page {id}</div>;
+	console.log(params);
+	return <div>Note Page </div>;
 };
 
 export default Page;
