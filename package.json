@@ -10,7 +10,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@next/env": "^10.0.7",
     "@theme-ui/presets": "^0.3.0",
     "body-parser": "^1.19.0",
     "dotenv-load": "^2.0.0",

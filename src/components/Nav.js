@@ -46,6 +46,16 @@ const Nav = () => (
                notes
             </a>
          </Link>
+         <a
+            href={process.env.HELP_APP_URL}
+            css={`
+               color: #000;
+               font-size: 2.5rem;
+               cursor: pointer;
+            `}
+         >
+            Help
+         </a>
       </nav>
    </header>
 );
