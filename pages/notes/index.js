@@ -11,7 +11,8 @@ const Page = () => {
 
 			{notes.map((note) => (
 				<div>
-					{/*This is only for client side routing*/}
+					{/*This is only for client side routing*/}{' '}
+					{/*By using dynamic route, we need to use as to tells nextjs what the actual value of param is*/}
 					<Link key={note.id} href='/notes/[id]' as={`/notes/${note.id}`}>
 						<a>
 							<strong>{note.title}</strong>
