@@ -25,6 +25,7 @@ const Page = ({ notes }) => {
 			>
 				{notes.map((note) => (
 					<div
+						key={note.id}
 						css={`
 							width: 33%;
 							padding: 2rem;

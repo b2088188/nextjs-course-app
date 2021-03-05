@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components/macro';
 
-const Page = () => {
+const Page = ({ content }) => {
 	return (
 		<div
 			css={`
@@ -26,7 +26,7 @@ const Page = () => {
 						margin: 0;
 					`}
 				>
-					Index Page
+					{content.title}
 				</h1>
 			</div>
 		</div>
@@ -34,3 +34,13 @@ const Page = () => {
 };
 
 export default Page;
+
+export function getStaticProps() {
+	return {
+		props: {
+			content: {
+				title: 'This is my really nice app'
+			}
+		}
+	};
+}
