@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components/macro';
 
-const Page = () => {
-	const notes = new Array(15).fill(1).map((e, i) => ({ id: i, title: `Note: ${i}` }));
+const Page = ({ notes }) => {
 	const router = useRouter();
 	return (
 		<div
@@ -59,3 +58,12 @@ const Page = () => {
 };
 
 export default Page;
+
+export async function getServerSideProps() {
+	const res = await fetch(`http://localhost:3000/api/notes/`);
+	const { data } = await res.json();
+
+	return {
+		props: { notes: data }
+	};
+}
